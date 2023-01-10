@@ -25,7 +25,8 @@ const formulario = ({ setobjeto }) => {
     { id: 'USD', nombre: 'Dolar de Estados Unidos' },
     { id: 'MXN', nombre: 'Peso Mexicano' },
     { id: 'EUR', nombre: 'Euro' },
-    { id: 'GBP', nombre: 'Libra Esterlina' }
+    { id: 'GBP', nombre: 'Libra Esterlina' },
+    { id: 'PEN', nombre: 'Nuevos Soles' }
   ]
 
   const [criptos, setcriptos] = useState([])
@@ -35,7 +36,7 @@ const formulario = ({ setobjeto }) => {
   useEffect(() => {
 
     const consultarAPI = async () => {
-      const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD'
+      const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=30&tsym=USD'
       const respuesta = await fetch(url)
       const resultado = await respuesta.json()
       const arrayCriptos = resultado.Data.map(cripto => {

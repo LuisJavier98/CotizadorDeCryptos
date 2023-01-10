@@ -12,10 +12,11 @@ margin-top:30px
 `
 const Indice = styled.p`
 font-size:20px;
+font-weigth:100;
 span{
-  font-weight:700
+  font-weight:800
 }
-@media(max-width:420px){
+@media(max-width:450px){
 font-size:15px
 }
 `
@@ -30,11 +31,11 @@ const Resultado = ({ cotizacion }) => {
     <Cotizacion>
       <Imagen src={`https://cryptocompare.com/${IMAGEURL}`} alt="Imagen Cripto" />
       <div>
-        <Indice>El precio es de <span>{PRICE}</span></Indice>
-        <Indice>Precio mas alto del dia <span>{HIGHDAY}</span></Indice>
-        <Indice>Precio mas bajo del dia <span>{LOWDAY}</span></Indice>
-        <Indice>Variacion ultimas 24 horas<span>{CHANGEPCT24HOUR}</span></Indice>
-        <Indice>Ultima actualizacion <span>{LASTUPDATE}</span> </Indice>
+        <Indice>El precio es de :<span>{PRICE}</span></Indice>
+        <Indice>Precio mas alto del dia :<span>{HIGHDAY}</span></Indice>
+        <Indice>Precio mas bajo del dia :<span>{LOWDAY}</span></Indice>
+        <Indice>Variacion ultimas 24 horas :<span>{CHANGEPCT24HOUR}%</span></Indice>
+        <Indice>Ultima actualizacion :<span>{LASTUPDATE}</span> </Indice>
       </div>
     </Cotizacion>
   )
